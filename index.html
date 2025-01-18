@@ -5,82 +5,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ride to Rebuild LA - Charity Bike Ride</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img.jpeg');
+            width: 30%;
+            height: 100vh;
+            background: url('img.jpeg');
             background-size: cover;
             background-position: center;
-            color: white;
-            padding: 100px 0;
-            margin-bottom: 3rem;
+            background-attachment: fixed;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 2rem;
         }
         .content-section {
-            background: white;
-            padding: 4rem 0;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            margin-bottom: 3rem;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin: 1rem auto;
+            position: relative;
+            max-width: 1200px;
+        }
+        .main-content {
+            margin-left: 30%;
+            padding: 2rem;
         }
         body {
-            background-color: #f8f9fa;
+            background-color: #f0f2f5;
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2 {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #ff4d4d, #f9cb28);
+            border: none;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(249, 203, 40, 0.3);
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+        }
+        .display-3 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+        }
+        .lead {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.9);
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+        }
+        .text-primary {
+            background: linear-gradient(45deg, #ff4d4d, #f9cb28);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .list-unstyled li {
+            padding: 8px;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        .list-unstyled li:hover {
+            border-left-color: #ff4d4d;
+            background: rgba(255,77,77,0.05);
+            transform: translateX(10px);
+        }
+        iframe {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 400px !important;
+        }
+        .hero-details {
+            margin-top: 2rem;
+            text-align: center;
+            color: white;
+        }
+        .hero-details p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
         }
     </style>
 </head>
 <body>
     <div class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-3 mb-4 fw-bold">Ride to Rebuild LA</h1>
-                    <p class="lead mb-4 fs-4">Join us for a charity bike ride around LAX to support the rebuilding of our community</p>
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1 class="display-3 mb-3" data-aos="fade-right">Ride to Rebuild LA</h1>
+                        <p class="lead mb-4" data-aos="fade-right">Join us for a charity bike ride around LAX to support the rebuilding of our community</p>
+                    </div>
                 </div>
+            </div>
+            <div class="hero-details" data-aos="fade-up">
+                <p><i class="bi bi-calendar-event me-2"></i>Sunday, January 19, 2025</p>
+                <p><i class="bi bi-clock me-2"></i>8:00 AM - 3:00 PM</p>
+                <p><i class="bi bi-geo-alt me-2"></i>Westchester Parkway, LA</p>
+                <p><i class="bi bi-bicycle me-2"></i>4.5 mile laps</p>
+                <a href="https://fundraise.givesmart.com/form/9HPZYw?vid=1ha5v0" class="btn btn-primary mt-3">Donate to Habitat for Humanity</a>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="content-section">
+    <div class="main-content">
+        <div class="content-section" data-aos="fade-left">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
-                    <h2 class="mb-4 text-primary">The Route - Laps of Westchester Parkway</h2>
-                    <iframe src="https://ridewithgps.com/embeds?type=route&id=49488678&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe>
+                    <h2 class="mb-3 text-primary">Event Details</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-calendar-event me-2 text-primary"></i><strong>Date:</strong> Sunday, January 19, 2025</li>
+                        <li class="mb-2"><i class="bi bi-clock me-2 text-primary"></i><strong>Time:</strong> 8:00 AM - 3:00 PM</li>
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i><strong>Location:</strong> Westchester Parkway, Los Angeles</li>
+                        <li class="mb-2"><i class="bi bi-bicycle me-2 text-primary"></i><strong>Distance:</strong> Do as many laps as you can! Each lap is about 4.5 miles (22 laps = 100 miles). Everyone welcome!</li>
+                        <li class="mb-2"><i class="bi bi-truck me-2 text-primary"></i><strong>Support:</strong> SAG support area with snacks, sports drink, <a href="https://www.instagram.com/usecadence" class="text-decoration-none">Cadence</a>, and <a href="https://www.instagram.com/skratchlabs" class="text-decoration-none">Skratch</a></li>
+                        <li class="mb-2"><i class="bi bi-cash-coin me-2 text-primary"></i><strong>Donation:</strong> $1 per lap completed</li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="content-section">
+        <div class="content-section" data-aos="fade-left">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="mb-4 text-primary">Event Details</h2>
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <ul class="list-unstyled">
-                                <li class="mb-3"><i class="bi bi-calendar-event me-2"></i><strong>Date:</strong> Sunday, January 19, 2025</li>
-                                <li class="mb-3"><i class="bi bi-clock me-2"></i><strong>Time:</strong> 8:00 AM - 3:00 PM</li>
-                                <li class="mb-3"><i class="bi bi-geo-alt me-2"></i><strong>Location:</strong> Westchester Parkway, Los Angeles</li>
-                                <li class="mb-3"><i class="bi bi-bicycle me-2"></i><strong>Distance:</strong> Do as many laps as you can! Donate $1 per lap. Everyone welcome!</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="mb-3 text-primary">The Route - Laps of Westchester Parkway</h2>
+                    <iframe src="https://ridewithgps.com/embeds?type=route&id=49488678&sampleGraph=true" style="width: 1px; min-width: 100%; border: none; border-radius: 20px;" scrolling="no"></iframe>
                 </div>
             </div>
         </div>
 
-        <div class="content-section">
+        <div class="content-section" data-aos="fade-left">
             <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-4 text-primary">Habitat for Humanity's Rebuild LA Fund</h2>
-                    <p class="mb-4 lead">All proceeds from this event will go directly to Habitat for Humanity's Rebuild LA Fund, helping to build and repair homes in our community. Together, we can make a difference in rebuilding LA.</p>
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                        <a href="https://fundraise.givesmart.com/form/9HPZYw?vid=1ha5v0" class="btn btn-primary btn-lg px-5 py-3">Donate Now</a>
-                        <a href="#volunteer" class="btn btn-outline-primary btn-lg px-5 py-3">Volunteer</a>
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2 class="mb-3 text-primary">Habitat for Humanity's Rebuild LA Fund</h2>
+                    <p class="mb-3 lead" style="color: #333; font-size: 1.1rem;">All proceeds from this event will go directly to Habitat for Humanity's Rebuild LA Fund, helping to build and repair homes in our community. Together, we can make a difference in rebuilding LA.</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a href="https://fundraise.givesmart.com/form/9HPZYw?vid=1ha5v0" class="btn btn-primary">Donate Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 </html>
