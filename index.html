@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ride to Rebuild LA - Charity Bike Ride</title>
+    <title>Ride to Rebuild LA - Charity Bike Ride Supporting Victims of the Devastating January 2025 Palisades & Eaton Fires</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         .hero {
-            width: 30%;
+            width: 100%;
             height: 100vh;
-            background: url('img.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            position: fixed;
-            left: 0;
-            top: 0;
+            background: url('fullsize.png') center center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+        }
+        @media (min-width: 992px) {
+            .hero {
+                width: 30%;
+                position: fixed;
+                background-attachment: fixed;
+            }
+            .main-content {
+                margin-left: 30%;
+            }
         }
         .hero-overlay {
             position: absolute;
@@ -29,11 +35,11 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            padding: 2rem;
+            padding: 1rem;
         }
         .content-section {
             background: rgba(255, 255, 255, 0.98);
-            padding: 1.5rem;
+            padding: 1.25rem;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
             margin: 1rem auto;
@@ -41,23 +47,28 @@
             max-width: 1200px;
         }
         .main-content {
-            margin-left: 30%;
-            padding: 2rem;
+            padding: 1rem;
         }
         body {
             background-color: #f0f2f5;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
         }
         h1, h2 {
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
         }
         .btn-primary {
             background: linear-gradient(45deg, #ff4d4d, #f9cb28);
             border: none;
-            padding: 10px 30px;
+            padding: 10px 20px;
             border-radius: 50px;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
+            font-weight: 500;
             transition: all 0.3s ease;
+            white-space: normal;
+            text-align: center;
         }
         .btn-primary:hover {
             transform: translateY(-3px);
@@ -65,18 +76,29 @@
             background: linear-gradient(45deg, #ff6b6b, #ffd93d);
         }
         .display-3 {
-            font-size: 4rem;
-            font-weight: 700;
+            font-size: 2.5rem;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: white;
             text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
         }
+        @media (min-width: 768px) {
+            .display-3 {
+                font-size: 3.5rem;
+            }
+        }
         .lead {
-            font-size: 1.2rem;
-            font-weight: 300;
+            font-size: 1rem;
+            font-weight: 400;
             color: rgba(255,255,255,0.9);
             text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+            line-height: 1.6;
+        }
+        @media (min-width: 768px) {
+            .lead {
+                font-size: 1.125rem;
+            }
         }
         .text-primary {
             background: linear-gradient(45deg, #ff4d4d, #f9cb28);
@@ -87,8 +109,13 @@
             padding: 8px;
             border-left: 4px solid transparent;
             transition: all 0.3s ease;
-            font-size: 1rem;
-            line-height: 1.4;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        @media (min-width: 768px) {
+            .list-unstyled li {
+                font-size: 1rem;
+            }
         }
         .list-unstyled li:hover {
             border-left-color: #ff4d4d;
@@ -97,17 +124,40 @@
         }
         iframe {
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            height: 400px !important;
+            height: 300px !important;
+        }
+        @media (min-width: 768px) {
+            iframe {
+                height: 400px !important;
+            }
         }
         .hero-details {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
             text-align: center;
             color: white;
         }
         .hero-details p {
             margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+        }
+        @media (min-width: 768px) {
+            .hero-details p {
+                font-size: 1rem;
+            }
+            .hero-details {
+                margin-top: 2rem;
+            }
+            .content-section {
+                padding: 1.5rem;
+            }
+            .main-content {
+                padding: 2rem;
+            }
+            .btn-primary {
+                padding: 10px 30px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -118,7 +168,7 @@
                 <div class="row">
                     <div class="col-12 text-center">
                         <h1 class="display-3 mb-3" data-aos="fade-right">Ride to Rebuild LA</h1>
-                        <p class="lead mb-4" data-aos="fade-right">Join us for a charity bike ride around LAX to support the rebuilding of our community</p>
+                        <p class="lead mb-4" data-aos="fade-right">Join us for a charity bike ride around LAX to support over 200,000 residents affected by the devastating Palisades and Eaton fires that destroyed 11,000+ homes</p>
                     </div>
                 </div>
             </div>
@@ -127,7 +177,7 @@
                 <p><i class="bi bi-clock me-2"></i>8:00 AM - 3:00 PM</p>
                 <p><i class="bi bi-geo-alt me-2"></i>Westchester Parkway, LA</p>
                 <p><i class="bi bi-bicycle me-2"></i>4.5 mile laps</p>
-                <a href="https://fundraise.givesmart.com/form/9HPZYw?vid=1ha5v0" class="btn btn-primary mt-3">Donate to Habitat for Humanity</a>
+                <a href="https://fundraise.givesmart.com/form/9HPZYw?vid=1ha5v0" class="btn btn-primary mt-3">Help Fire Victims - Donate Now</a>
             </div>
         </div>
     </div>
@@ -136,14 +186,16 @@
         <div class="content-section" data-aos="fade-left">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
+                    <h2 class="mb-3 text-primary">Supporting Our Community After the Devastating Fires</h2>
+                    <p class="mb-4">The January 2025 Palisades and Eaton fires, fueled by 100mph Santa Ana winds, have devastated our community. With over 37,000 acres burned, 11,000 structures destroyed, and 25 lives lost, more than 200,000 of our neighbors need our help to rebuild. Every mile you ride helps provide shelter and hope to those who lost everything in these unprecedented fires.</p>
                     <h2 class="mb-3 text-primary">Event Details</h2>
                     <ul class="list-unstyled">
                         <li class="mb-2"><i class="bi bi-calendar-event me-2 text-primary"></i><strong>Date:</strong> Sunday, January 19, 2025</li>
                         <li class="mb-2"><i class="bi bi-clock me-2 text-primary"></i><strong>Time:</strong> 8:00 AM - 3:00 PM</li>
                         <li class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i><strong>Location:</strong> Westchester Parkway, Los Angeles</li>
                         <li class="mb-2"><i class="bi bi-bicycle me-2 text-primary"></i><strong>Distance:</strong> Do as many laps as you can! Each lap is about 4.5 miles (22 laps = 100 miles). Everyone welcome!</li>
-                        <li class="mb-2"><i class="bi bi-truck me-2 text-primary"></i><strong>Support:</strong> SAG support area with snacks, sports drink, <a href="https://www.instagram.com/usecadence" class="text-decoration-none">Cadence</a>, and <a href="https://www.instagram.com/skratchlabs" class="text-decoration-none">Skratch</a></li>
-                        <li class="mb-2"><i class="bi bi-cash-coin me-2 text-primary"></i><strong>Donation:</strong> $1 per lap completed</li>
+                        <li class="mb-2"><i class="bi bi-truck me-2 text-primary"></i><strong>Support:</strong> SAG support area near the fire station with snacks, sports drink, <a href="https://www.instagram.com/usecadence" class="text-decoration-none">Cadence</a>, and <a href="https://www.instagram.com/skratchlabs" class="text-decoration-none">Skratch</a></li>
+                        <li class="mb-2"><i class="bi bi-cash-coin me-2 text-primary"></i><strong>Donation:</strong> $1 per lap completed - all proceeds go to wildfire victims</li>
                     </ul>
                 </div>
             </div>
@@ -162,10 +214,20 @@
             <div class="row">
                 <div class="col-lg-10 mx-auto text-center">
                     <h2 class="mb-3 text-primary">Habitat for Humanity's Rebuild LA Fund</h2>
-                    <p class="mb-3 lead" style="color: #333; font-size: 1.1rem;">All proceeds from this event will go directly to Habitat for Humanity's Rebuild LA Fund, helping to build and repair homes in our community. Together, we can make a difference in rebuilding LA.</p>
+                    <p class="mb-3 lead" style="color: #333; font-size: 1.125rem;">The Palisades and Eaton fires have devastated communities from Pacific Palisades to Pasadena, destroying over 11,000 homes and structures. All proceeds from this event will go directly to Habitat for Humanity's Rebuild LA Fund, helping to rebuild homes for fire victims across Los Angeles County. Together, we can help our neighbors rebuild their lives and make our community stronger than ever.</p>
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <a href="https://fundraise.givesmart.com/form/9HPZYw?vid=1ha5v0" class="btn btn-primary">Donate Now</a>
+                        <a href="https://fundraise.givesmart.com/form/9HPZYw?vid=1ha5v0" class="btn btn-primary">Support Fire Victims - Donate Now</a>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" data-aos="fade-left">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="mb-3 text-primary">SAG Support Area Location</h2>
+                    <p class="mb-3">There will be SAG support at the fire station area.</p>
+                    <img src="sag-area.png" alt="SAG Area Location" style="max-width: 100%; border-radius: 10px;">
                 </div>
             </div>
         </div>
@@ -173,7 +235,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
